@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>{{imp[0]}} - {{imp[1]}}</title>
+        <title>{{imp[0]}} - {{imp[1][0]}}</title>
         <link rel="stylesheet" href="/views/yousoro/css/primer.css">
         <link rel="stylesheet" href="/views/yousoro/css/style.css">
         <!-- 필수 CSS, JS -->
@@ -12,8 +12,8 @@
         <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['[math]', '[/math]']]}});</script>
         <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script>
         <script src='https://www.google.com/recaptcha/api.js'></script>
-        <style>{{!imp[4]}}</style>
-        <script>{{!imp[5]}}</script>
+        <style>{{!imp[2][0]}}</style>
+        <script>{{!imp[2][1]}}</script>
         <script>
             function folding(num) {
                 var fol = document.getElementById('folding_' + num);
@@ -29,9 +29,9 @@
             }
         </script>
         <!-- 필수 부분 끝 -->
-        <meta name="twitter:creator" content="@{{imp[1]}}">
+        <meta name="twitter:creator" content="@{{imp[1][0]}}">
         <meta name="twitter:title" content="{{imp[0]}}">
-        <meta name="twitter:site" content="@{{imp[1]}}">
+        <meta name="twitter:site" content="@{{imp[1][0]}}">
         <meta name="twitter:card" content="summary">
         <link rel="shortcut icon" href="/views/yousoro/img/on.ico">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -40,7 +40,7 @@
         <br>
         <div class="one-fifth column">
             <div id="top">
-                <a href="/" id="logo">{{imp[1]}}</a>
+                <a href="/" id="logo">{{imp[1][0]}}</a>
                 <div>
                     <a href="/recent_changes" id="RecentChanges">
                         <i class="fa fa-refresh" aria-hidden="true"></i>
@@ -54,9 +54,9 @@
                         <i class="fa fa-random" aria-hidden="true"></i>
                     </a>
                     <a href="/user" id="log">
-                        % if(imp[3] == 1):
+                        % if(imp[2][2] == 1):
                             <i class="fa fa-user" aria-hidden="true"></i>
-                        % elif(imp[3] == 0):
+                        % elif(imp[2][2] == 0):
                             <i class="fa fa-user-times" aria-hidden="true"></i>
                         % else:
                             <i class="fa fa-user-secret" aria-hidden="true"></i>
@@ -101,23 +101,23 @@
                         </nav>
                         <br>
                         <span id="edit_time">
-                            % if(not imp[7] == 0):
-                                최근 수정 : {{imp[7]}}
+                            % if(imp[3][1] != 0):
+                                최근 수정 : {{imp[3][1]}}
                             % end
                         </span>
                     </div>
                 % end
                 <h1 class="title">
                     {{imp[0]}}
-                    % if(not imp[6] == 0):
-                        <sub>{{imp[6]}}</sub>
+                    % if(imp[3][0] != 0):
+                        <sub>{{imp[3][0]}}</sub>
                     % end
                 </h1>
                 <br>
                 {{!data}}
                 <hr id="last">
                 <p>
-                    {{!imp[2]}}
+                    {{!imp[1][1]}}
                 </p>
                 <div id="powered">
                     <a href="https://github.com/2DU/openNAMU"><img src="/views/yousoro/img/on2.png" width="100px"></a>
