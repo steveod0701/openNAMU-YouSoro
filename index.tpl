@@ -42,7 +42,7 @@
         <br>
         <div class="one-fifth column">
             <div id="top">
-                <a href="/" id="logo">{{!imp[1][0]}}</a>
+                <a href="/" id="logo">{{!imp[1][4]}}</a>
                 <div>
                     <a href="/recent_changes" id="RecentChanges">
                         <i class="fa fa-refresh" aria-hidden="true"></i>
