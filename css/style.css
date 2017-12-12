@@ -10,6 +10,11 @@
     margin-left: 5px;
 }
 
+table#toron tbody tr td {
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
 #redirect {
     margin-top: -25px;
 }
